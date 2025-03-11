@@ -1,0 +1,32 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.home-container h1 {
+  margin-bottom: var(--spacing-lg);
+  font-size: 3rem;
+}
+
+.home-container p {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .home-container h1 {
+    font-size: 2rem;
+  }
+
+  .home-container p {
+    font-size: 1.2rem;
+  }
+}
