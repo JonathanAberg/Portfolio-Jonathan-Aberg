@@ -6,13 +6,11 @@ import reactRefresh from "eslint-plugin-react-refresh";
 export default [
   { ignores: ["dist"] },
   {
-    files: ["**/*.{js,jsx}"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: {
-        ...globals.browser,
-        motion: true,
-      },
+      ecmaVersion: "latest",
+      ecmaFeatures: { jsx: true },
+      sourceType: "module",
       parserOptions: {
         ecmaVersion: "latest",
         ecmaFeatures: { jsx: true },
@@ -24,15 +22,14 @@ export default [
       "react-refresh": reactRefresh,
     },
     rules: {
-      ...js.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
       "no-unused-vars": [
         "error",
         {
-          varsIgnorePattern: "^(motion|React)$",
+          varsIgnorePattern: "^(motion|React)$", // om problem uppsstår igen |Outlet|Header|Footer|NavLink|App|AnimatePresence|Home
           argsIgnorePattern: "^_",
         },
       ],
+
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },

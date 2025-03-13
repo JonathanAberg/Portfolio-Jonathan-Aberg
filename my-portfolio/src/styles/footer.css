@@ -4,6 +4,17 @@
   padding: var(--spacing-lg);
   margin-top: auto;
   border-top: 1px solid var(--light-gray);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 999;
+}
+
+.footer--hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .footer-content {

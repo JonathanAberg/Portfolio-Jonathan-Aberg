@@ -1,5 +1,19 @@
 @import "theme.css";
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  margin: var(--spacing-lg) auto;
+  padding: 0 var(--spacing-md);
+  min-height: calc(100vh - 200px);
+}
+
 main {
   max-width: 1200px;
   margin: var(--spacing-lg) auto;

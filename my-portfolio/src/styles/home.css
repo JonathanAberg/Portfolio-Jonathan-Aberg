@@ -1,32 +1,48 @@
-.home-container {
+.fullscreen-container {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.fullscreen-section {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 80vh;
-  text-align: center;
-  padding: var(--spacing-xl);
+  align-items: center;
+  padding: calc(70px + 2rem) 2rem; /* Account for navbar height */
+  background: var(--white);
 }
 
-.home-container h1 {
-  margin-bottom: var(--spacing-lg);
+/* Adjust padding for home section */
+.fullscreen-section:first-of-type {
+  padding: 2rem 2rem calc(70px + 2rem);
+}
+
+.fullscreen-section h2 {
   font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
 }
 
-.home-container p {
-  font-size: 1.5rem;
-  color: var(--text-color);
-  opacity: 0.9;
+.fullscreen-section p {
+  font-size: 1.2rem;
   max-width: 600px;
   line-height: 1.6;
+  color: var(--text-color);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-  .home-container h1 {
+  .fullscreen-section h2 {
     font-size: 2rem;
   }
 
-  .home-container p {
-    font-size: 1.2rem;
+  .fullscreen-section p {
+    font-size: 1rem;
   }
 }
