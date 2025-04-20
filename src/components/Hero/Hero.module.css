@@ -1,0 +1,141 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.highlight {
+  background: linear-gradient(
+    to right,
+    var(--primary-light),
+    var(--secondary-light)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  opacity: 0.7;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.primaryBtn {
+  background: linear-gradient(
+    to right,
+    var(--primary-light),
+    var(--secondary-light)
+  );
+  color: white;
+  box-shadow: 0 4px 15px rgba(93, 107, 253, 0.4);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(93, 107, 253, 0.5);
+}
+
+.secondaryBtn {
+  border: 2px solid var(--primary-light);
+  background: transparent;
+}
+
+.secondaryBtn:hover {
+  background: var(--primary-light);
+  color: white;
+}
+
+.shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.2;
+}
+
+.shape1 {
+  width: 400px;
+  height: 400px;
+  background: var(--primary-light);
+  top: -100px;
+  right: -100px;
+}
+
+.shape2 {
+  width: 300px;
+  height: 300px;
+  background: var(--secondary-light);
+  bottom: -50px;
+  left: 50%;
+}
+
+.shape3 {
+  width: 200px;
+  height: 200px;
+  background: var(--accent-light);
+  top: 30%;
+  left: 10%;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .shape {
+    opacity: 0.1;
+  }
+}
