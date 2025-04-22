@@ -37,7 +37,7 @@ const Contact = () => {
                 <FaEnvelope className={styles.icon} />
               </div>
               <h3>Email</h3>
-              <p>youremail@example.com</p>
+              <p>Jonathan.aberg@hotmail.com</p>
             </div>
 
             <div className={styles.infoCard}>
@@ -45,7 +45,7 @@ const Contact = () => {
                 <FaMapMarkerAlt className={styles.icon} />
               </div>
               <h3>Location</h3>
-              <p>City, Country</p>
+              <p>Gothenburg, Sweden</p>
             </div>
 
             <div className={styles.infoCard}>
@@ -53,7 +53,7 @@ const Contact = () => {
                 <FaPhone className={styles.icon} />
               </div>
               <h3>Phone</h3>
-              <p>+1 (123) 456-7890</p>
+              <p>+46 730 87 55 32</p>
             </div>
           </div>
 

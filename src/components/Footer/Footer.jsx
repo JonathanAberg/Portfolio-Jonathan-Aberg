@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className={styles.content}>
           <div className={styles.logo}>
-            <h3>Your Name</h3>
+            <h3>Jonathan Åberg</h3>
             <p>Frontend Developer</p>
           </div>
 
