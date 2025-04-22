@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./About.module.css";
 import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
+import profilePicture from "/Profilbild.png"; // Updated to use absolute path from public folder
 
 const About = () => {
   const contentRef = useRef(null);
@@ -37,10 +38,7 @@ const About = () => {
         <div className={styles.content} ref={contentRef}>
           <div className={styles.imageContainer}>
             <div className={styles.image}>
-              {/* Replace with your actual image */}
-              <div className={styles.placeholder}>
-                <span>Your Image</span>
-              </div>
+              <img src={profilePicture} alt="Profile" />
             </div>
           </div>
 
