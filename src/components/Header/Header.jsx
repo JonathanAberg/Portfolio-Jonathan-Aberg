@@ -23,8 +23,10 @@ const Header = ({ darkMode, toggleDarkMode }) => {
 
     const section = document.querySelector(sectionId);
     if (section) {
+      // Adjust the offset value - increase it to scroll farther
+      const offset = sectionId === "#contact" ? -10 : 80;
       window.scrollTo({
-        top: section.offsetTop - 80, // Adjust for header height
+        top: section.offsetTop - offset,
         behavior: "smooth",
       });
     }
